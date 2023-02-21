@@ -46,11 +46,16 @@ img {
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.container {
+
+
+.container , .container-mini {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+    /* outline: 1px solid red; */
+
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -390,7 +395,7 @@ img {
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(47, 47, 66, 0.7)),
-      url(../images/hero-bg-tablet.webp);
+      url(../images/hero-bg-tablet@2x.webp);
   }
 }
 @media screen and (min-width: 768px) and(min-device-pixel-ratio: 2) {
@@ -593,6 +598,9 @@ img {
   background-color: #f4f4fd;
 }
 @media screen and (min-width: 768px) {
+  .container-mini{
+    width: 582px;
+  }
   .team {
     padding-bottom: 104px;
   }
@@ -607,16 +615,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: -72px;
+  row-gap: 72px;
 }
 @media screen and (min-width: 768px) {
   .team-list {
-    margin-left: -24px;
-  }
+column-gap: 24px;
+row-gap: 64px;
+}
 }
 .team-item {
   max-width: 264px;
-  margin-bottom: 72px;
   border-radius: 0px 0px 4px 4px;
   background-color: #fff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -624,7 +632,6 @@ img {
 }
 @media screen and (min-width: 768px) {
   .team-item {
-    margin-left: 24px;
   }
 }
 .team-title {
@@ -661,6 +668,7 @@ img {
 .team-cards-list {
   display: flex;
   gap: 24px;
+  row-gap: 72px;
   justify-content: center;
 }
 .team-cards-item {
@@ -690,6 +698,12 @@ img {
   padding-top: 96px;
   padding-bottom: 96px;
 }
+@media screen and (min-width:768px) {
+  .container-mini{
+    width: 582px;
+  }
+  
+}
 @media screen and (min-width: 1200px) {
   .customers {
     padding-top: 120px;
@@ -709,27 +723,31 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: -72px;
-  margin-left: -16px;
+  column-gap: 16px;
+  row-gap: 72px;
+  
+
 }
 .customers-item {
-  margin-left: 16px;
-  margin-bottom: 72px;
-  width: calc(50% - 16px);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 @media screen and (min-width: 768px) {
   .customers-list {
-    margin-left: -24px;
+    column-gap: 24px;
   }
   .customers-item {
-    width: calc(33.3333333333% - 24px);
+    width: calc((100% - 48px)/3);
   }
 }
 @media screen and (min-width: 1200px) {
   .customers-item {
-    width: calc(16.6666666667% - 24px);
+    width: calc((100% - 120px)/6);
   }
+ .container{
+  min-width: 1158px
+  
+ }
 }
 .customers-link {
   width: 100%;
