@@ -632,7 +632,8 @@ row-gap: 64px;
 }
 @media screen and (min-width: 768px) {
   .team-item {
-  }
+    
+    }
 }
 .team-title {
   margin-bottom: 72px;
